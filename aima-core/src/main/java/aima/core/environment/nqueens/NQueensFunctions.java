@@ -19,14 +19,14 @@ import java.util.Objects;
 public class NQueensFunctions {
 
     public static Problem<NQueensBoard, QueenAction> createIncrementalFormulationProblem(int boardSize) {
-        return new GeneralProblem<>(new NQueensBoard(boardSize), NQueensFunctions::getIFActions,
-                NQueensFunctions::getResult, NQueensFunctions::testGoal);
+	return new GeneralProblem<>(new NQueensBoard(boardSize), NQueensFunctions::getIFActions,
+		NQueensFunctions::getResult, NQueensFunctions::testGoal);
     }
 
-    public static Problem<NQueensBoard, QueenAction> createCompleteStateFormulationProblem
-            (int boardSize, NQueensBoard.Config config) {
-        return new GeneralProblem<>(new NQueensBoard(boardSize, config), NQueensFunctions::getCSFActions,
-                NQueensFunctions::getResult, NQueensFunctions::testGoal);
+    public static Problem<NQueensBoard, QueenAction> createCompleteStateFormulationProblem(int boardSize,
+	    NQueensBoard.Config config) {
+	return new GeneralProblem<>(new NQueensBoard(boardSize, config), NQueensFunctions::getCSFActions,
+		NQueensFunctions::getResult, NQueensFunctions::testGoal);
     }
 
     /**
@@ -34,20 +34,20 @@ public class NQueensFunctions {
      * n-queens problem.
      * <p>
      * Assumes that queens are placed column by column, starting with an empty
-     * board, and provides queen placing actions for all non-attacked positions
-     * of the first free column.
+     * board, and provides queen placing actions for all non-attacked positions of
+     * the first free column.
      */
     public static List<QueenAction> getIFActions(NQueensBoard state) {
-        List<QueenAction> actions = new ArrayList<>();
+	List<QueenAction> actions = new ArrayList<>();
 
-        int numQueens = state.getNumberOfQueensOnBoard();
-        int boardSize = state.getSize();
-        for (int i = 0; i < boardSize; i++) {
-            XYLocation newLocation = new XYLocation(numQueens, i);
-            if (!(state.isSquareUnderAttack(newLocation)))
-                actions.add(new QueenAction(QueenAction.PLACE_QUEEN, newLocation));
-        }
-        return actions;
+	int numQueens = state.getNumberOfQueensOnBoard();
+	int boardSize = state.getSize();
+	for (int i = 0; i < boardSize; i++) {
+	    XYLocation newLocation = new XYLocation(numQueens, i);
+	    if (!(state.isSquareUnderAttack(newLocation)))
+		actions.add(new QueenAction(QueenAction.PLACE_QUEEN, newLocation));
+	}
+	return actions;
     }
 
     /**
@@ -58,39 +58,39 @@ public class NQueensFunctions {
      * movements in vertical direction as actions.
      */
     public static List<QueenAction> getCSFActions(NQueensBoard state) {
-        List<QueenAction> actions = new ArrayList<>();
-        for (int i = 0; i < state.getSize(); i++)
-            for (int j = 0; j < state.getSize(); j++) {
-                XYLocation loc = new XYLocation(i, j);
-                if (!state.queenExistsAt(loc))
-                    actions.add(new QueenAction(QueenAction.MOVE_QUEEN, loc));
-            }
-        return actions;
+	List<QueenAction> actions = new ArrayList<>();
+	for (int i = 0; i < state.getSize(); i++)
+	    for (int j = 0; j < state.getSize(); j++) {
+		XYLocation loc = new XYLocation(i, j);
+		if (!state.queenExistsAt(loc))
+		    actions.add(new QueenAction(QueenAction.MOVE_QUEEN, loc));
+	    }
+	return actions;
     }
 
     /**
-     * Implements a RESULT function for the n-queens problem.
-     * Supports queen placing, queen removal, and queen movement actions.
+     * Implements a RESULT function for the n-queens problem. Supports queen
+     * placing, queen removal, and queen movement actions.
      */
     public static NQueensBoard getResult(NQueensBoard state, QueenAction action) {
-        NQueensBoard result = new NQueensBoard(state.getSize());
-        result.setQueensAt(state.getQueenPositions());
-        if (Objects.equals(action.getName(), QueenAction.PLACE_QUEEN))
-            result.addQueenAt(action.getLocation());
-        else if (Objects.equals(action.getName(), QueenAction.REMOVE_QUEEN))
-            result.removeQueenFrom(action.getLocation());
-        else if (Objects.equals(action.getName(), QueenAction.MOVE_QUEEN))
-            result.moveQueenTo(action.getLocation());
-        // if action is not understood or is a NoOp
-        // the result will be the current state.
-        return result;
+	NQueensBoard result = new NQueensBoard(state.getSize());
+	result.setQueensAt(state.getQueenPositions());
+	if (Objects.equals(action.getName(), QueenAction.PLACE_QUEEN))
+	    result.addQueenAt(action.getLocation());
+	else if (Objects.equals(action.getName(), QueenAction.REMOVE_QUEEN))
+	    result.removeQueenFrom(action.getLocation());
+	else if (Objects.equals(action.getName(), QueenAction.MOVE_QUEEN))
+	    result.moveQueenTo(action.getLocation());
+	// if action is not understood or is a NoOp
+	// the result will be the current state.
+	return result;
     }
 
     /**
      * Implements a GOAL-TEST for the n-queens problem.
      */
     public static boolean testGoal(NQueensBoard state) {
-        return state.getNumberOfQueensOnBoard() == state.getSize() && state.getNumberOfAttackingPairs() == 0;
+	return state.getNumberOfQueensOnBoard() == state.getSize() && state.getNumberOfAttackingPairs() == 0;
     }
 
     /**
@@ -98,6 +98,14 @@ public class NQueensFunctions {
      * the board.
      */
     public static double getNumberOfAttackingPairs(Node<NQueensBoard, QueenAction> node) {
-        return node.getState().getNumberOfAttackingPairs();
+	return node.getState().getNumberOfAttackingPairs();
+    }
+    
+    public static double getHeuristicProbabilisticEstimationOfSolution(Node<NQueensBoard, QueenAction> node) {
+	return node.getState().probabilisticEstimation();
+    }
+    
+    public static double getNullHeuristicEstimation(Node<NQueensBoard, QueenAction> node) {
+	return 0.0;
     }
 }
