@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProbModelXML formatVersion="0.2.0">
+  <ProbNet type="BayesianNetwork">
+    <Comment showWhenOpeningNetwork="false"><![CDATA[<<Pulse dos veces para incluir/modificar comentario>>]]></Comment>
+    <DecisionCriteria>
+      <Criterion name="---" unit="---" />
+    </DecisionCriteria>
+    <Properties />
+    <Variables>
+      <Variable name="Caja" type="finiteStates" role="chance">
+        <Coordinates x="273" y="107" />
+        <States>
+          <State name="mala" />
+          <State name="buena" />
+        </States>
+      </Variable>
+      <Variable name="Bola1" type="finiteStates" role="chance">
+        <Coordinates x="459" y="239" />
+        <States>
+          <State name="negra" />
+          <State name="roja" />
+        </States>
+      </Variable>
+      <Variable name="Bola2" type="finiteStates" role="chance">
+        <Coordinates x="199" y="239" />
+        <States>
+          <State name="negra" />
+          <State name="roja" />
+        </States>
+      </Variable>
+    </Variables>
+    <Links>
+      <Link directed="true">
+        <Variable name="Caja" />
+        <Variable name="Bola1" />
+      </Link>
+      <Link directed="true">
+        <Variable name="Caja" />
+        <Variable name="Bola2" />
+      </Link>
+      <Link directed="true">
+        <Variable name="Bola1" />
+        <Variable name="Bola2" />
+      </Link>
+    </Links>
+    <Potentials>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="Caja" />
+        </Variables>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="Bola1" />
+          <Variable name="Caja" />
+        </Variables>
+        <Values>0.67 0.33 0.5 0.5</Values>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="Bola2" />
+          <Variable name="Caja" />
+          <Variable name="Bola1" />
+        </Variables>
+        <Values>0.5 0.5 0.33 0.67 1.0 0.0 0.67 0.33</Values>
+      </Potential>
+    </Potentials>
+  </ProbNet>
+  <InferenceOptions>
+    <MulticriteriaOptions>
+      <SelectedAnalysisType>UNICRITERION</SelectedAnalysisType>
+      <Unicriterion>
+        <Scales>
+          <Scale Criterion="---" Value="1.0" />
+        </Scales>
+      </Unicriterion>
+      <CostEffectiveness>
+        <Scales>
+          <Scale Criterion="---" Value="1.0" />
+        </Scales>
+        <CE_Criteria>
+          <CE_Criterion Criterion="---" Value="Cost" />
+        </CE_Criteria>
+      </CostEffectiveness>
+    </MulticriteriaOptions>
+  </InferenceOptions>
+  <Evidence>
+    <EvidenceCase />
+    <EvidenceCase>
+      <Finding variable="Bola2" state="negra" />
+      <Finding variable="Bola1" state="roja" />
+    </EvidenceCase>
+  </Evidence>
+</ProbModelXML>
