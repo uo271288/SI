@@ -201,7 +201,7 @@
           <Variable name="Abuelo3" />
           <Variable name="Abuelo4" />
         </Variables>
-        <Values>0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25</Values>
+        <Values>1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 0.0 0.5 0.5 0.0 0.25 0.5 0.25 0.0 0.5 0.5 0.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0</Values>
       </Potential>
       <Potential type="Table" role="conditionalProbability">
         <Variables>
@@ -238,7 +238,7 @@
           <Variable name="Abuelo1" />
           <Variable name="Abuelo2" />
         </Variables>
-        <Values>0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25</Values>
+        <Values>1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 0.0 0.5 0.5 0.0 0.25 0.5 0.25 0.0 0.5 0.5 0.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0</Values>
       </Potential>
       <Potential type="Table" role="conditionalProbability">
         <Variables>
@@ -253,8 +253,8 @@
           <Variable name="Progenitor1" />
           <Variable name="Progenitor2" />
         </Variables>
-        <Values>1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 0.0 0.5 0.5 0.0 0.25 0.5 0.25 0.0 0.5 0.5 0.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 0.0 0.5 0.5 0.0 0.25 0.5 0.25 0.0 0.5 0.5 0.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 0.0 0.5 0.5 0.0 0.25 0.5 0.25 0.0 0.5 0.5 0.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 0.0 0.5 0.5 0.0 0.25 0.5 0.25 0.0 0.5 0.5 0.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 0.0 0.5 0.5 0.0 0.25 0.5 0.25 0.0 0.5 0.5 0.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 0.0 0.5 0.5 0.0 0.25 0.5 0.25 0.0 0.5 0.5 0.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 0.0 0.5 0.5 0.0 0.25 0.5 0.25 0.0 0.5 0.5 0.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 0.0 0.5 0.5 0.0 0.25 0.5 0.25 0.0 0.5 0.5 0.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 0.0 0.5 0.5 0.0 0.25 0.5 0.25 0.0 0.5 0.5 0.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0</Values>
-      </Potential>
+        <Values>1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 0.0 0.5 0.5 0.0 0.25 0.5 0.25 0.0 0.5 0.5 0.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0</Values>
+		</Potential>
       <Potential type="Table" role="conditionalProbability">
         <Variables>
           <Variable name="Abuelo2" />
@@ -282,34 +282,30 @@
       <Potential type="Table" role="conditionalProbability">
         <Variables>
           <Variable name="Color_Abuelo1" />
-          <Variable name="Progenitor1" />
           <Variable name="Abuelo1" />
         </Variables>
-        <Values>1.0 0.0 0.0 1.0 0.0 1.0 1.0 0.0 0.0 1.0 0.0 1.0 1.0 0.0 0.0 1.0 0.0 1.0</Values>
+        <Values>1.0 0.0 0.0 1.0 0.0 1.0</Values>
       </Potential>
       <Potential type="Table" role="conditionalProbability">
         <Variables>
           <Variable name="Color_Abuelo4" />
-          <Variable name="Progenitor2" />
           <Variable name="Abuelo4" />
         </Variables>
-        <Values>1.0 0.0 0.0 1.0 0.0 1.0 1.0 0.0 0.0 1.0 0.0 1.0 1.0 0.0 0.0 1.0 0.0 1.0</Values>
+        <Values>1.0 0.0 0.0 1.0 0.0 1.0</Values>
       </Potential>
       <Potential type="Table" role="conditionalProbability">
         <Variables>
           <Variable name="Color_Abuelo2" />
-          <Variable name="Progenitor1" />
           <Variable name="Abuelo2" />
         </Variables>
-        <Values>1.0 0.0 0.0 1.0 0.0 1.0 1.0 0.0 0.0 1.0 0.0 1.0 1.0 0.0 0.0 1.0 0.0 1.0</Values>
+        <Values>1.0 0.0 0.0 1.0 0.0 1.0</Values>
       </Potential>
       <Potential type="Table" role="conditionalProbability">
         <Variables>
           <Variable name="Color_Abuelo3" />
-          <Variable name="Progenitor2" />
           <Variable name="Abuelo3" />
         </Variables>
-        <Values>1.0 0.0 0.0 1.0 0.0 1.0 1.0 0.0 0.0 1.0 0.0 1.0 1.0 0.0 0.0 1.0 0.0 1.0</Values>
+        <Values>1.0 0.0 0.0 1.0 0.0 1.0</Values>
       </Potential>
     </Potentials>
   </ProbNet>
@@ -334,9 +330,9 @@
   <Evidence>
     <EvidenceCase />
     <EvidenceCase>
-      <Finding variable="Progenitor2" state="Rr" />
-      <Finding variable="Color_Progenitor1" state="blanco" />
       <Finding variable="Color_Progenitor2" state="rojo" />
+      <Finding variable="Color_Progenitor1" state="blanco" />
+      <Finding variable="Progenitor2" state="Rr" />
     </EvidenceCase>
   </Evidence>
 </ProbModelXML>

@@ -30,7 +30,7 @@
         </States>
       </Variable>
       <Variable name="Hijo1" type="finiteStates" role="chance">
-        <Coordinates x="831" y="483" />
+        <Coordinates x="824" y="488" />
         <States>
           <State name="rr" />
           <State name="Rr" />
@@ -38,7 +38,7 @@
         </States>
       </Variable>
       <Variable name="Color_Hijo1" type="finiteStates" role="chance">
-        <Coordinates x="831" y="592" />
+        <Coordinates x="824" y="597" />
         <States>
           <State name="blanco" />
           <State name="rojo" />
@@ -53,14 +53,14 @@
         </States>
       </Variable>
       <Variable name="Color_Hijo2" type="finiteStates" role="chance">
-        <Coordinates x="1028" y="596" />
+        <Coordinates x="1043" y="596" />
         <States>
           <State name="blanco" />
           <State name="rojo" />
         </States>
       </Variable>
       <Variable name="Hijo2" type="finiteStates" role="chance">
-        <Coordinates x="1028" y="487" />
+        <Coordinates x="1042" y="486" />
         <States>
           <State name="rr" />
           <State name="Rr" />
@@ -201,7 +201,7 @@
           <Variable name="Abuelo3" />
           <Variable name="Abuelo4" />
         </Variables>
-        <Values>0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25</Values>
+        <Values>1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 0.0 0.5 0.5 0.0 0.25 0.5 0.25 0.0 0.5 0.5 0.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0</Values>
       </Potential>
       <Potential type="Table" role="conditionalProbability">
         <Variables>
@@ -238,7 +238,7 @@
           <Variable name="Abuelo1" />
           <Variable name="Abuelo2" />
         </Variables>
-        <Values>0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25 0.25 0.5 0.25</Values>
+        <Values>1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 0.0 0.5 0.5 0.0 0.25 0.5 0.25 0.0 0.5 0.5 0.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0</Values>
       </Potential>
       <Potential type="Table" role="conditionalProbability">
         <Variables>
@@ -253,7 +253,7 @@
           <Variable name="Progenitor1" />
           <Variable name="Progenitor2" />
         </Variables>
-        <Values>1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 0.0 0.5 0.5 0.0 0.25 0.5 0.25 0.0 0.5 0.5 0.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 0.0 0.5 0.5 0.0 0.25 0.5 0.25 0.0 0.5 0.5 0.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 0.0 0.5 0.5 0.0 0.25 0.5 0.25 0.0 0.5 0.5 0.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 0.0 0.5 0.5 0.0 0.25 0.5 0.25 0.0 0.5 0.5 0.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 0.0 0.5 0.5 0.0 0.25 0.5 0.25 0.0 0.5 0.5 0.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 0.0 0.5 0.5 0.0 0.25 0.5 0.25 0.0 0.5 0.5 0.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 0.0 0.5 0.5 0.0 0.25 0.5 0.25 0.0 0.5 0.5 0.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 0.0 0.5 0.5 0.0 0.25 0.5 0.25 0.0 0.5 0.5 0.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 0.0 0.5 0.5 0.0 0.25 0.5 0.25 0.0 0.5 0.5 0.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0</Values>
+        <Values>1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0 0.0 0.5 0.5 0.0 0.25 0.5 0.25 0.0 0.5 0.5 0.0 1.0 0.0 0.0 0.5 0.5 0.0 0.0 1.0</Values>
       </Potential>
       <Potential type="Table" role="conditionalProbability">
         <Variables>
@@ -330,9 +330,11 @@
   <Evidence>
     <EvidenceCase />
     <EvidenceCase>
-      <Finding variable="Color_Progenitor2" state="rojo" />
-      <Finding variable="Color_Progenitor1" state="blanco" />
-      <Finding variable="Progenitor2" state="Rr" />
+      <Finding variable="Abuelo3" state="rr" />
+      <Finding variable="Color_Abuelo2" state="blanco" />
+      <Finding variable="Color_Hijo1" state="rojo" />
+      <Finding variable="Color_Abuelo1" state="rojo" />
+      <Finding variable="Abuelo4" state="rr" />
     </EvidenceCase>
   </Evidence>
 </ProbModelXML>
